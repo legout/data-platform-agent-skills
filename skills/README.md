@@ -26,5 +26,7 @@ This directory is structured for `npx skills` discovery.
 - `data-engineering-streaming`
 - `data-science-eda`
 - `data-science-feature-engineering`
+- `data-science-interactive-apps`
 - `data-science-model-evaluation`
+- `data-science-notebooks`
 - `flowerpower`

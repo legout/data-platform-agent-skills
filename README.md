@@ -1,6 +1,6 @@
 # Data Platform Agent Skills
 
-A curated skill library for coding agents focused on data engineering, data science, and ML workflows.
+A curated skill library for coding agents focused on data engineering, data science, and interactive data applications.
 
 ## Install with `npx skills`
 
@@ -15,7 +15,8 @@ Install specific skills:
 ```bash
 npx skills add legout/data-platform-agent-skills \
   --skill data-engineering-core \
-  --skill data-science-eda
+  --skill data-science-eda \
+  --skill data-science-notebooks
 ```
 
 Install all skills:
@@ -28,22 +29,27 @@ npx skills add legout/data-platform-agent-skills --skill '*'
 
 - `skills/` — installable skill directories (for `npx skills` discovery)
 - `data-engineering/` — data engineering source content
-- `data-science/` — data science source content
+- `data-science/` — data science, notebooks, and interactive apps
 - `flowerpower-skill/` — FlowerPower skill package
 - `tools/` — utility scripts
 
 ## Skill categories
 
-### Data Engineering
+### Data Engineering (23 skills)
 - Core: Polars, DuckDB, PyArrow, PostgreSQL
 - Storage: Lakehouse (Delta, Iceberg, Hudi), cloud access, auth
 - Orchestration: Prefect, Dagster, dbt
 - Quality, Observability, Streaming
 
-### Data Science
-- EDA (Exploratory Data Analysis)
-- Feature Engineering
-- Model Evaluation
+### Data Science (5 skills)
+- **EDA** — Exploratory Data Analysis
+- **Feature Engineering** — ML feature preparation
+- **Model Evaluation** — Validation and tuning
+- **Notebooks** — Jupyter, marimo
+- **Interactive Apps** — Streamlit, Panel, Gradio
+
+### Pipeline Framework (1 skill)
+- FlowerPower — Hamilton DAG-based pipelines
 
 ## Notes
 
