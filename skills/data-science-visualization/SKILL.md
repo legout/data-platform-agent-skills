@@ -198,12 +198,12 @@ show(p)
 
 ## Progressive disclosure
 
-- `../references/matplotlib-advanced.md` — Subplots, annotations, custom styles
-- `../references/seaborn-statistical.md` — Complex statistical plots
-- `../references/plotly-dash.md` — Full dashboards with callbacks
-- `../references/altair-grammar.md` — Vega-Lite transformations
-- `../references/holoviz-datashader.md` — Large data visualization
-- `../references/bokeh-server.md` — Real-time streaming apps
+- `references/matplotlib-advanced.md` — Subplots, annotations, custom styles
+- `references/seaborn-statistical.md` — Complex statistical plots
+- `references/plotly-dash.md` — Full dashboards with callbacks
+- `references/altair-grammar.md` — Vega-Lite transformations
+- `references/holoviz-datashader.md` — Large data visualization
+- `references/bokeh-server.md` — Real-time streaming apps
 
 ## Related skills
 
