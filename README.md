@@ -20,6 +20,22 @@ npx skills add legout/data-platform-agent-skills \
 npx skills add legout/data-platform-agent-skills --skill '*'
 ```
 
+### ⚠️ Migration Warning (Breaking Change)
+
+If you previously installed skills manually (symlinked or copied the nested `data-engineering/` directory), **you must remove the old structure first** to avoid conflicts:
+
+```bash
+# Remove old nested skill structure (if exists)
+rm -rf ~/.pi/agent/skills/data-engineering/
+rm -rf ~/.pi/agent/skills/data-science/
+rm -rf ~/.pi/agent/skills/flowerpower-skill/
+
+# Now install fresh with npx skills
+npx skills add legout/data-platform-agent-skills --all
+```
+
+**Why this happens:** The old structure had skills nested (e.g., `data-engineering/core/`). The new `npx skills` distribution uses flat names (`data-engineering-core/`). Both have the same skill `name:` in frontmatter, causing pi to detect conflicts.
+
 **From local clone:**
 
 ```bash
@@ -49,7 +65,7 @@ data-platform-agent-skills/
 ├── tools/                     # Development utilities
 │   ├── skill_lint.py         # Lint skills for correctness
 │   └── build_skills.py       # Generate skills/ for npx
-└── skills/                    # GENERATED (gitignored)
+└── skills/                    # GENERATED (committed for npx skills)
                                # Flat installable skill packages
 ```
 
@@ -137,6 +153,8 @@ Checks:
 
 ## Notes
 
-- `skills/` directory is gitignored — never edit directly
+- `skills/` directory is **committed** for `npx skills` compatibility — never edit directly, edit source instead
+- Source directories (`data-engineering/`, `data-science/`, `flowerpower-skill/`) are authoritative
+- Run `python3 scripts/build_skills.py` to regenerate `skills/` from source
 - Internal development docs (`ARCHITECTURE_DECISIONS.md`, `INTEGRATION_SUMMARY.md`) are excluded from repo
 - All Python code in skills is validated for syntax correctness
